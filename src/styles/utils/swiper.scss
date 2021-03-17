@@ -1,14 +1,15 @@
 .swiper-container {
   height: 100%;
+  padding-top: 20px !important;
 }
 
 .swiper-pagination {
   top: 0;
-  left: 0;
+  left: -65px !important;
 }
 
 .swiper-pagination-bullets .swiper-pagination-bullet {
-  background-color: #ffffff;
+  background-color: #fff;
   border: none;
   border-radius: 50%;
   height: 15px;
@@ -17,11 +18,7 @@
 }
 
 .swiper-pagination-bullets .swiper-pagination-bullet-active {
-  background-color: #000000;
-}
-
-.swiper-pagination .swiper-pagination-bullets {
-  left: -65px;
+  background-color: #000;
 }
 
 .swiper-container-horizontal .swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child) {
