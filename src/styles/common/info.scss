@@ -7,6 +7,7 @@
 
   @include media-tablet {
     max-width: 500px;
+    align-self: center;
   }
 
   &__title {
@@ -17,8 +18,8 @@
     margin-bottom: 24px;
 
     @include media-tablet {
-      font-size: 32px;
-      line-height: 44px;
+      font-size: 30px;
+      line-height: 42px;
     }
 
     @include media-mobile {

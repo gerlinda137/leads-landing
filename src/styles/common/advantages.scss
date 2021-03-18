@@ -8,6 +8,8 @@
 
   @include media-mobile {
     width: 280px;
+
+    @include visually-hidden;
   }
 
   &__item-title {

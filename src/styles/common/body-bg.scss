@@ -22,6 +22,12 @@
     &:first-child::after {
 
       @include svg-bg(url("../img/first.svg"));
+
+      @include media-mobile {
+
+        @include svg-bg(url("../img/first.svg"));
+        
+      }
     }
 
     &:nth-child(2) {

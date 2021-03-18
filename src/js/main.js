@@ -4,9 +4,7 @@ import 'normalize.css';
 
 Swiper.use([EffectFade, Pagination]);
 
-const slider = document.querySelector(`.swiper-container`);
-// eslint-disable-next-line no-unused-vars
-const swiper = new Swiper(slider, {
+const swiper = new Swiper(`.swiper-container`, {
   slidesPerView: 1,
   speed: 2000,
   effect: `fade`,
@@ -19,29 +17,20 @@ const swiper = new Swiper(slider, {
   },
 });
 
-
 const bodyBgs = document.querySelectorAll(`.body-bg__bg`);
 
 swiper.on(`activeIndexChange`, function () {
-  bodyBgs[swiper.activeIndex].classList.add(`body-bg__bg--active`);
   bodyBgs[swiper.previousIndex].classList.remove(`body-bg__bg--active`);
+  bodyBgs[swiper.activeIndex].classList.add(`body-bg__bg--active`);
 
-  if (swiper.activeIndex === 2) {
-    document.body.style.color = `black`;
-  } else {
+  const classList = swiper.slides[swiper.activeIndex].querySelector(`ul`).classList;
+
+  if (classList.contains(`terms--white`)) {
     document.body.style.color = `white`;
   }
-});
 
-function updateAdvantagesVisibility() {
-
-  if (window.innerWidth <= 768) {
-    document.querySelector(`.advantages`).classList.add(`visually-hidden`);
-  } else {
-    document.querySelector(`.advantages`).classList.remove(`visually-hidden`);
+  if (classList.contains(`terms--black`)) {
+    document.body.style.color = `black`;
   }
-
-}
-updateAdvantagesVisibility();
-window.onresize = updateAdvantagesVisibility;
+});
 
