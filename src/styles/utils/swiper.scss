@@ -9,19 +9,21 @@
 }
 
 .swiper-pagination-bullets .swiper-pagination-bullet {
-  background-color: #fff;
+  background-color: #ffffff;
   border: none;
   border-radius: 50%;
   height: 15px;
   width: 15px;
   opacity: 1;
+  margin-right: 16px !important;
+  margin-left: 0 !important;
 }
 
 .swiper-pagination-bullets .swiper-pagination-bullet-active {
-  background-color: #000;
+  background-color: #000000;
 }
 
-.swiper-container-horizontal .swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child) {
-  margin-right: 16px;
-  margin-left: 0;
-}
+// .swiper-container-horizontal .swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child) {
+//   margin-right: 16px;
+//   margin-left: 0;
+// }

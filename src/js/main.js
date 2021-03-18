@@ -1,21 +1,8 @@
 import { Swiper, EffectFade, Pagination } from 'swiper';
 import 'swiper/swiper-bundle.css';
-
 import 'normalize.css';
+
 Swiper.use([EffectFade, Pagination]);
-
-
-// const bgSlider = document.querySelector(`.swiper-container`);
-
-// // eslint-disable-next-line no-unused-vars
-// const mySwiper = new Swiper(bgSlider, {
-//   slidesPerView: 1,
-//   speed: 1000,
-//   effect: `fade`,
-//   fadeEffect: {
-//     crossFade: true
-//   },
-// });
 
 const slider = document.querySelector(`.swiper-container`);
 // eslint-disable-next-line no-unused-vars
@@ -31,3 +18,18 @@ const swiper = new Swiper(slider, {
     clickable: true,
   },
 });
+
+
+const bodyBgs = document.querySelectorAll(`.body-bg__bg`);
+
+swiper.on(`activeIndexChange`, function () {
+  bodyBgs[swiper.activeIndex].classList.add(`body-bg__bg--active`);
+  bodyBgs[swiper.previousIndex].classList.remove(`body-bg__bg--active`);
+
+  if (swiper.activeIndex === 2) {
+    document.body.style.color = `black`;
+  } else {
+    document.body.style.color = `white`;
+  }
+});
+
