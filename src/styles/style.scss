@@ -6,6 +6,10 @@
 
 @import "mixins/media";
 
+@import "mixins/buttons";
+
+@import "mixins/svg-bg";
+
 @import "common/global";
 
 @import "common/body-bg";
@@ -21,5 +25,3 @@
 @import "common/slider";
 
 @import "common/terms";
-
-@import "common/card";

@@ -2,4 +2,20 @@
   max-width: 370px;
   width: 100%;
   margin-top: -20px;
+  position: relative;
+
+  &__link {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 38px;
+    border: 1px #ffffff solid;
+    padding: 20px 43px;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+
+    @include hover-button;
+  }
 }

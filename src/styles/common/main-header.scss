@@ -26,5 +26,9 @@
     border: 1px #ffffff solid;
     border-radius: 6%;
     padding: 13px 15px;
+    overflow: hidden;
+    position: relative;
+
+    @include hover-button;
   }
 }
