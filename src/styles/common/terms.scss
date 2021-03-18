@@ -1,4 +1,16 @@
 .terms {
+  &--white {
+    color: white;
+  }
+
+  &--black {
+    color: black;
+  }
+
+  @include media-mobile {
+    margin-bottom: 120px;
+  }
+
   &__item:not(:last-child) {
     margin-bottom: 26px;
   }
@@ -8,6 +20,10 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 28px;
+
+    @include media-tablet {
+      font-size: 18px;
+    }
   }
 
   &__item-info {
@@ -17,6 +33,10 @@
     font-weight: 700;
     line-height: 100%;
     letter-spacing: 0.02em;
+
+    @include media-tablet {
+      font-size: 80px;
+    }
 
     &--sup {
       position: relative;
@@ -31,6 +51,10 @@
       position: absolute;
       top: 15px;
       white-space: nowrap;
+
+      @include media-tablet {
+        font-size: 20px;
+      }
     }
   }
 }

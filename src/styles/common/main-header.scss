@@ -3,6 +3,10 @@
   justify-content: center;
   margin-bottom: 120px;
 
+  @include media-mobile {
+    margin-bottom: 30px;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -10,9 +14,14 @@
     max-width: 1240px;
     width: 100%;
     padding-top: 32px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
     z-index: 1;
+
+    @include media-mobile {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 
   &__logo-link {

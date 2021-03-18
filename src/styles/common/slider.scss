@@ -1,8 +1,18 @@
 .slider {
-  max-width: 370px;
+  max-width: 350px;
   width: 100%;
   margin-top: -20px;
   position: relative;
+
+  @include media-tablet {
+    max-width: 330px;
+  }
+
+  @include media-mobile {
+    margin-top: 20px;
+    display: flex;
+    align-self: center;
+  }
 
   &__link {
     font-weight: 600;
@@ -17,5 +27,14 @@
     bottom: 0;
 
     @include hover-button;
+
+    @include media-tablet {
+      font-size: 26px;
+      padding: 16px 39px;
+    }
+
+    @include media-mobile {
+      bottom: 20px;
+    }
   }
 }

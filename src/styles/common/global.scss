@@ -17,17 +17,10 @@ body {
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
-  transition: 1.5s ease-in-out;
+  transition: color 1.5s ease-in-out;
+  min-height: 320px;
+  overflow-x: hidden;
 }
-
-// .body-bg {
-//   background: no-repeat center center fixed linear-gradient(315deg, #ae320a 19.87%, #f75d2b 80.11%), #0a0e20;
-//   opacity: 1;
-//   transition: background 0.5s ease-out;
-
-
-//
-// }
 
 img {
   max-width: 100%;
@@ -41,4 +34,12 @@ a {
 ul {
   list-style: none;
   padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }

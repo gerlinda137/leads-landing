@@ -33,3 +33,15 @@ swiper.on(`activeIndexChange`, function () {
   }
 });
 
+function updateAdvantagesVisibility() {
+
+  if (window.innerWidth <= 768) {
+    document.querySelector(`.advantages`).classList.add(`visually-hidden`);
+  } else {
+    document.querySelector(`.advantages`).classList.remove(`visually-hidden`);
+  }
+
+}
+updateAdvantagesVisibility();
+window.onresize = updateAdvantagesVisibility;
+
